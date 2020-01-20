@@ -25,7 +25,7 @@ SECRET_KEY = '256lfn=8wn5c!&%&)e6bg-yt=tcs35@8%1kfabmx(%)^^&@9oz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8080-cdc7c558-9df7-43ba-937d-6f56a3cd7cdd.ws-eu01.gitpod.io']
+ALLOWED_HOSTS = ['8000-f9c3e4ad-8843-4ee1-a7d9-3c850312b587.ws-eu01.gitpod.io']
 
 
 # Application definition
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'django_auth.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR + "/django_auth", 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
