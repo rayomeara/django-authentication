@@ -25,7 +25,7 @@ SECRET_KEY = '256lfn=8wn5c!&%&)e6bg-yt=tcs35@8%1kfabmx(%)^^&@9oz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-fb218a5c-83ac-4820-b1d4-21d565bbd9a5.ws-eu01.gitpod.io']
+ALLOWED_HOSTS = ['8000-f2871a61-a0b5-414d-82e5-56e9234dab51.ws-eu01.gitpod.io']
 
 
 # Application definition
@@ -121,3 +121,16 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
+
+# EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = os.environ.get("EMAIL_ADDRESS")
+EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_PASSWORD")
+EMAIL_PORT = 587
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'accounts.backends.EmailAuth'
+]
