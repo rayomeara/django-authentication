@@ -25,7 +25,7 @@ SECRET_KEY = '256lfn=8wn5c!&%&)e6bg-yt=tcs35@8%1kfabmx(%)^^&@9oz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-f2871a61-a0b5-414d-82e5-56e9234dab51.ws-eu01.gitpod.io']
+ALLOWED_HOSTS = ['8000-c6f58e8d-1914-49de-8632-e84ec38fc1e9.ws-eu01.gitpod.io']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_forms_bootstrap',
     'accounts'
 ]
 
@@ -119,6 +120,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static")
+]
 
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 
